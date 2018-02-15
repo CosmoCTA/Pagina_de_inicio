@@ -1,0 +1,27 @@
+[
+  {
+    "index": 0,
+    "name": "Aaron",
+    "image": "images/pagina/alanS.jpg",
+    "email": "arontellezm@gmail.com",
+    "github": "https://github.com/AaronRebel09",
+    "phone":"55 41 29 74 91"
+  },
+  {
+    "index": 1,
+    "name": "alan",
+    "image": "images/pagina/alanE.jpg",
+    "email": "arontellezm@gmail.com",
+    "github": "https://github.com/AaronRebel09",
+    "phone":"55 41 29 74 91"
+  },
+  {
+    "index": 1,
+    "name": "alan",
+    "image": "images/pagina/uriel.jpg",
+    "email": "arontellezm@gmail.com",
+    "github": "https://github.com/AaronRebel09",
+    "phone":"55 41 29 74 91"
+  }
+
+]

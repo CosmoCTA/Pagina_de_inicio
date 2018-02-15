@@ -1,0 +1,78 @@
+
+
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+
+<dom-module id="contacts-papers">
+	<template>
+		<style >
+
+	</style>
+
+	<iron-ajax url="../src/data/contacts.json" last-response="{{data}}" auto></iron-ajax>
+
+	<iron-list items="[[data]]" as="item" scroll-target="document" scroll-offset="200" scroll-target="document">
+
+		<template>
+
+			<div class="item">
+
+				<paper-card heading="Desarrollador Web Jr" image="[[item.image]]" class="white" style="margin-top:8px;width: 200px;height: 450px;">
+
+					<div class="card">
+						<h5>          
+							<p>[[item.name]]</p>
+							<p>e-mail: [[item.email]]</p>                
+						</h5>
+					</div>
+					<div class="card-actions">  
+						<paper-button>
+							<div role="listbox">
+								<!-- phone -->
+								<paper-icon-item>
+									<iron-icon icon="communication:phone" slot="item-icon">
+									</iron-icon>
+									<paper-item-body two-line>
+										<div>Celular</div>
+										<div secondary>[[item.phone]]</div>
+									</paper-item-body>
+								</paper-icon-item>          
+							</div>
+						</paper-button>                                                  
+						<paper-button>
+							<div role="listbox">
+								<!-- github -->
+								<paper-icon-item>
+									<iron-icon src="images/pagina/Octocat.jpg">
+									</iron-icon>
+									<paper-item-body two-line>
+										<div><a href="[[item.github]]">Github</a></div>
+										<div secondary>@AaronRebel09</div>
+									</paper-item-body>
+								</paper-icon-item>          
+							</div>
+						</paper-button>  
+					</div>    
+				</paper-card>
+			</div>
+
+		</template>	
+
+	</iron-list>
+
+
+</template>
+
+<script>
+	class ContactsPapers extends Polymer.Element {
+		static get is() { return 'contacts-papers'; }
+
+
+	}
+
+	window.customElements.define(ContactsPapers.is, ContactsPapers);
+</script>
+</dom-module>

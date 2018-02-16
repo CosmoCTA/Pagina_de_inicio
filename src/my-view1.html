@@ -10,33 +10,49 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="shared-styles.html">
-<link rel="import" href="../bower_components/iron-image/iron-image.html">
 
 <dom-module id="my-view1">
   <template>
     <style include="shared-styles">
-      :host {
-        display: block;
+    :host {
+      display: block;
 
-        padding: 10px;
-      }
-    </style>
-    <div class="img-responsive">
-      <iron-image  src="../images/pagina/piccinelli.png" ></iron-image>
-    </div>
+      padding: 10px;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* Para que el contenedor tenga relación de aspecto 16/9 */
+      padding-top: 30px;
+      height: 0;
+      overflow: hidden;
+    }
     
-      <h2>Dra.Gabriella Piccinelli Bocchi</h2>
-    <div class="card">
-      <h1>Inicio</h1>
-      
-      <p>Ingeniera Física, UAM Azcapotzalco.</p>
-      <p>Maestra en Ciencias (Física) UNAM</p>
-      <p>Doctora en Ciencias (Física) UNAM</p>
-      <p>Profesora de Carrera Titular “B” Tiempo Completo Definitiva.</p>
-      <p>Adscrita al Centro Tecnológico, Área de Estudios Ambientales.</p>
-      <p>Miembro del Sistema Nacional de Investigadores (SNI) nivel I.</p>
-      <p>Catedrática en la Carrera de Ingeniería en Computación y en el Posgrado de Ingeniería.</p>
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+  <div class="card" >
+    <h1 style="font-size: 30pt">Inicio</h1>
+    <div class="white" style="margin-top:15px; width: auto;" align="center">
+
+      <div class="card">
+
+        <h2>Ecuaciones Diferenciales</h2>
+        <div class="video-container">
+          <iframe width="auto" height="auto" src="https://www.youtube.com/embed/hMHDXADOnUw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div> 
+
     </div>
+
   </template>
 
   <script>

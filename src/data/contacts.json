@@ -1,27 +1,36 @@
 [
   {
     "index": 0,
-    "name": "Aaron",
-    "image": "images/pagina/alanS.jpg",
+    "name": "Rodrigo Aaron Martinez Tellez",
+    "image": "images/pagina/aron.png",
     "email": "arontellezm@gmail.com",
     "github": "https://github.com/AaronRebel09",
     "phone":"55 41 29 74 91"
   },
   {
     "index": 1,
-    "name": "alan",
-    "image": "images/pagina/alanE.jpg",
-    "email": "arontellezm@gmail.com",
-    "github": "https://github.com/AaronRebel09",
-    "phone":"55 41 29 74 91"
+    "name": "Pedro Uriel Martinez Martinez",
+    "image": "images/pagina/uriel.png",
+    "email": "petrvs2310@gmail.com",
+    "github": "https://github.com/petrvs2",
+    "phone":"55 26 55 00 26"
   },
   {
-    "index": 1,
-    "name": "alan",
-    "image": "images/pagina/uriel.jpg",
-    "email": "arontellezm@gmail.com",
-    "github": "https://github.com/AaronRebel09",
-    "phone":"55 41 29 74 91"
+    "index": 2,
+    "name": "Alan Escamilla Mondragon",
+    "image": "images/pagina/alanE.png",
+    "email": "alan.escamillam@gmail.com",
+    "github": "https://github.com/allimacse",
+    "phone":"55 39 38 98 82"
+  },
+  {
+    "index": 3,
+    "name": "Alan Sandoval Almaraz",
+    "image": "images/pagina/alanS.png",
+    "email": "sandoval.almaraz@gmail.com",
+    "github": "https://github.com/AlanSaAl",
+    "phone":"55 39 38 98 82"
   }
+  
 
 ]

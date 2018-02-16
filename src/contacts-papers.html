@@ -10,6 +10,8 @@
 	<template>
 		<style >
 
+
+
 	</style>
 
 	<iron-ajax url="../src/data/contacts.json" last-response="{{data}}" auto></iron-ajax>
@@ -20,12 +22,13 @@
 
 			<div class="item">
 
-				<paper-card heading="Desarrollador Web Jr" image="[[item.image]]" class="white" style="margin-top:8px;width: 200px;height: 450px;">
+				<paper-card heading="Desarrollador Web Jr" image="[[item.image]]" class="white" style="margin-top:15px; width: 200px; height: 500px;">
 
 					<div class="card">
 						<h5>          
 							<p>[[item.name]]</p>
-							<p>e-mail: [[item.email]]</p>                
+							<p>e-mail:</p>
+							<p>[[item.email]]</p>                
 						</h5>
 					</div>
 					<div class="card-actions">  
@@ -46,7 +49,7 @@
 							<div role="listbox">
 								<!-- github -->
 								<paper-icon-item>
-									<iron-icon src="images/pagina/Octocat.jpg">
+									<iron-icon src="images/pagina/Octocat.png">
 									</iron-icon>
 									<paper-item-body two-line>
 										<div><a href="[[item.github]]">Github</a></div>

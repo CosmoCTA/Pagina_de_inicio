@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-view1">
@@ -19,10 +20,54 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       padding: 10px;
     }
-   
+
+   .flex-horizontal {
+      @apply --layout-horizontal;
+    }
+    .flex-vertical  {
+      @apply --layout-vertical;
+    }
+    .flexchild {
+      @apply --layout-flex;
+    }
   </style>
 
-    
+<div class="container flex-horizontal">
+  <div class="card flexchild">Bienvenida</div>  
+  <div class="card flexchild">Imagen</div>
+</div>
+
+  <div class="container flex-horizontal">
+    <div class="card flexchild">
+      <h3>Investigacion</h3>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, veniam cupiditate? Tempore, odio obcaecati! Beatae rerum placeat ipsum ab culpa numquam eveniet possimus libero similique iure, ducimus itaque molestiae quis.
+    </div>
+    <div class="card flexchild">
+        <h3>Docencia</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita iure fuga tempore ea ullam aspernatur, dolorum esse quam aperiam qui culpa sit at quasi nostrum nam molestiae distinctio repellat recusandae!      
+    </div>    
+  </div>
+
+  <div class="container flex-horizontal">
+    <div class="card flexchild">
+        <h3>Divulgacion</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum debitis sapiente quidem distinctio, porro iure blanditiis unde in ratione sequi ipsa obcaecati dolore explicabo natus dolor repellendus quaerat aut doloribus.        
+    </div>
+    <div class="card flexchild">
+        <h3>SS</h3>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate odio architecto nam magni, sint voluptatum in natus, reiciendis accusamus voluptas rerum dolores consectetur earum aspernatur ipsa vitae libero corporis itaque.
+    </div>    
+  </div>
+
+  <div class="container flex-horizontal">
+    <div class="card flexchild">five</div>
+    <div class="card flexchild">six</div>    
+  </div>
+
+  <div class="container flex-horizontal">
+    <div class="card flexchild">seven</div>
+    <div class="card flexchild">eight</div>    
+  </div>
 
   </template>
 

@@ -11,18 +11,17 @@
 		<style >
 
 
-
 	</style>
 
 	<iron-ajax url="../src/data/contacts.json" last-response="{{data}}" auto></iron-ajax>
-
-	<iron-list items="[[data]]" as="item" scroll-target="document" scroll-offset="200" scroll-target="document">
-
+	<div class="container" style="justify-content: center; align-items: center; justify-self: end;">
+		
+		<iron-list align="center" items="[[data]]" as="item" scroll-target="document" scroll-offset="200" grid>	
 		<template>
 
 			<div class="item">
 
-				<paper-card heading="Desarrollador Web Jr" image="[[item.image]]" class="white" style="margin-top:15px; width: 200px; height: 500px;">
+				<paper-card heading="Desarrollador Web Jr" image="[[item.image]]" class="white" style=" margin: 15px; width: 200px; height: 500px;">
 
 					<div class="card">
 						<h5>          
@@ -53,7 +52,7 @@
 									</iron-icon>
 									<paper-item-body two-line>
 										<div><a href="[[item.github]]">Github</a></div>
-										<div secondary>@AaronRebel09</div>
+										<div secondary>@[[item.name_github]]</div>
 									</paper-item-body>
 								</paper-icon-item>          
 							</div>
@@ -65,6 +64,10 @@
 		</template>	
 
 	</iron-list>
+
+	</div>
+
+	
 
 
 </template>

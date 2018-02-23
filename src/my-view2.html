@@ -14,40 +14,65 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom-module id="my-view2">
   <template>
     <style include="shared-styles">
-      :host {
-        display: block;
+    :host {
+      display: block;
 
-        padding: 10px;
-      }
-    </style>
-    <div class="white" align="center">
+      padding: 10px;
+    }
+    p{
+      text-align: justify;
+    }
+  </style>
 
-    <h1 style="font-size: 30pt">Docencia</h1>
+  <div class="white" align="center">
+
+    <h1 style="font-size: 30pt">Investigación</h1>
 
     <!--*****************************************************************LICENCIATURA***********************************************************-->
 
-     <div class="card" style="max-width: 80%;">
-      <h2>Licenciatura</h2>
-      <p>Mi labor docente a nivel licenciatura esta ligada a la carrera de Ingeniería en computación en la FES Aragón, la materia de la cual soy responsable es:</p>
-      
+    
 
-      <div class="card" style="margin-top:15px; height: auto; background-color: #EBF4F7;max-width: 90%;">
+    <div class="card" style="max-width: 80%;align-content: center;">
 
-        <p>Mi labor docente a nivel licenciatura esta ligada a la carrera de Ingeniería en computación en la FES Aragón, la materia de la cual soy responsable es:</p>
+      <p>Mi trabajo de investigación se divide en dos grandes áreas, que he venido siguiendo desde hace varios años.</p>
       
-        
-      </div>
     </div>   
 
-  </div>
-    
-  </template>
 
-  <script>
-    class MyView2 extends Polymer.Element {
-      static get is() { return 'my-view2'; }
-    }
+    <div class="card" style="max-width: 80%;align-content: center;">
 
-    window.customElements.define(MyView2.is, MyView2);
-  </script>
+      <h2>Investigación básica en campos magnéticos y cosmología</h2>
+      <h3>Líneas de investigación</h3>
+      <p>Comportamiento de la materia en condiciones extremas: altas temperaturas, densidades y campos magnéticos.</p>
+      <p>Efecto de los campos magnéticos primordiales sobre la evolución del universo temprano, estudios teóricos y simulaciones numéricas.</p>
+      <p>Condensados de Bose-Einstein en el universo temprano.</p>
+      <p>Condensados de Bose-Einstein en computación cuántica.</p>
+      <p>A través de diferentes proyectos de investigación, he contribuido a formar y consolidar grupos de trabajo en estos temas. Actualmente, soy responsable del proyecto DGAPA-PAPIIT IN117817 "Comportamiento de la materia en condiciones extremas en el universo"</p>
+      
+    </div>   
+
+    <div class="card" style="max-width: 80%;align-content: center;">
+
+     <h2>Investigación aplicada en estudios ambientales</h2>
+     <h3>Líneas de investigación</h3>
+     <p>Desempeño ambiental y calidad de vida de pequeñas comunidades y centros de producción</p>
+     <p>Buenas prácticas ambientales</p>
+     <p>Captación y aprovechamiento de agua de lluvia </p>
+     <p>Análisis del concepto de desarrollo sostenible y de sus aplicaciones</p>
+
+   </div>   
+
+
+
+ </div>
+
+</template>
+
+<script>
+  class MyView2 extends Polymer.Element {
+    static get is() { return 'my-view2'; }
+  }
+
+  window.customElements.define(MyView2.is, MyView2);
+</script>
 </dom-module>

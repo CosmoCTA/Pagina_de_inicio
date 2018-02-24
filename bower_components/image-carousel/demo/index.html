@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>image-carousel demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../../polymer/lib/elements/dom-repeat.html">
+    <link rel="import" href="../../polymer/lib/elements/dom-bind.html">
+    <link rel="import" href="../../polymer/lib/elements/custom-style.html">
+    <link rel="import" href="../image-carousel.html">
+    <link rel="import" href="./image-carousel-demo-app.html">
+
+    <link rel="import" href="../../polymer/polymer-element.html">
+    <link rel="import" href="../../iron-icons/iron-icons.html">
+    <link rel="import" href="../../iron-icon/iron-icon.html">
+    <link rel="import" href="../../iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="../../polymer/lib/mixins/gesture-event-listeners.html">
+    <link rel="import" href="../../polymer/lib/elements/dom-repeat.html">
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+        image-carousel:nth-child(odd) {
+          display: none;
+        }
+        image-carousel-demo-app:nth-child(odd) {
+          display: none;
+        }
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic image-carousel demo</h3>
+      <demo-snippet>
+        <template>
+          <image-carousel aria-label="Basic image-carousel demo">
+            <template slot="images" is="dom-repeat" items='["https://c2.staticflickr.com/2/1217/4607963354_e1a8fea210_z.jpg", "http://www.hdwallpapery.com/static/images/1391099215267_hero2_niQ3B7S.jpg", "https://tse4.mm.bing.net/th?id=ORT.TH_470633631&pid=1.12&eid=G.470633631"]'>
+              <img class="scrolling-images" src="[[item]]" alt$="demo alt [[index]]"  width="100%" height="374px">
+            </template>
+          </image-carousel>
+        </template>
+        <dom-bind>
+          <template>
+            <image-carousel aria-label="Basic image-carousel demo">
+              <template slot="images" is="dom-repeat" items='["https://c2.staticflickr.com/2/1217/4607963354_e1a8fea210_z.jpg", "http://www.hdwallpapery.com/static/images/1391099215267_hero2_niQ3B7S.jpg", "https://tse4.mm.bing.net/th?id=ORT.TH_470633631&pid=1.12&eid=G.470633631"]'>
+                <img class="scrolling-images" src="[[item]]" alt$="demo alt [[index]]" width="100%" height="374px">
+              </template>
+            </image-carousel>
+          </template>
+        </dom-bind>
+        <div></div>
+      </demo-snippet>
+    </div>
+
+
+
+    <div class="vertical-section-container centered">
+      <h3 id="autoplay">image-carousel demo with autoplay feature</h3>
+      <demo-snippet>
+        <template>
+          <image-carousel autoscroll aira-labelledby="autoplay">
+            <template slot="images" is="dom-repeat" items='["https://c2.staticflickr.com/2/1217/4607963354_e1a8fea210_z.jpg", "http://www.hdwallpapery.com/static/images/1391099215267_hero2_niQ3B7S.jpg", "https://tse4.mm.bing.net/th?id=ORT.TH_470633631&pid=1.12&eid=G.470633631"]'>
+              <img class="scrolling-images" src="[[item]]" alt$="demo alt [[index]]"  width="100%" height="374px">
+            </template>
+          </image-carousel>
+        </template>
+        <dom-bind>
+          <template>
+            <image-carousel autoscroll aira-labelledby="autoplay">
+              <template slot="images" is="dom-repeat" items='["https://c2.staticflickr.com/2/1217/4607963354_e1a8fea210_z.jpg", "http://www.hdwallpapery.com/static/images/1391099215267_hero2_niQ3B7S.jpg", "https://tse4.mm.bing.net/th?id=ORT.TH_470633631&pid=1.12&eid=G.470633631"]'>
+                <img class="scrolling-images" src="[[item]]" alt$="demo alt [[index]]"  width="100%" height="374px">
+              </template>
+            </image-carousel>
+          </template>
+        </dom-bind>
+        <div></div>
+      </demo-snippet>
+    </div>
+
+
+
+    <div class="vertical-section-container centered">
+      <h3 id="no-dots">image-carousel demo with no dots</h3>
+      <demo-snippet>
+        <template>
+          <image-carousel hide-dots aria-labelledby="no-dots">
+            <template slot="images" is="dom-repeat" items='["https://c2.staticflickr.com/2/1217/4607963354_e1a8fea210_z.jpg", "http://www.hdwallpapery.com/static/images/1391099215267_hero2_niQ3B7S.jpg", "https://tse4.mm.bing.net/th?id=ORT.TH_470633631&pid=1.12&eid=G.470633631"]'>
+              <img class="scrolling-images" src="[[item]]" alt$="demo alt [[index]]"  width="100%" height="374px">
+            </template>
+          </image-carousel>
+        </template>
+        <dom-bind>
+          <template>
+            <image-carousel hide-dots aria-labelledby="no-dots">
+              <template slot="images" is="dom-repeat" items='["https://c2.staticflickr.com/2/1217/4607963354_e1a8fea210_z.jpg", "http://www.hdwallpapery.com/static/images/1391099215267_hero2_niQ3B7S.jpg", "https://tse4.mm.bing.net/th?id=ORT.TH_470633631&pid=1.12&eid=G.470633631"]'>
+                <img class="scrolling-images" src="[[item]]" alt$="demo alt [[index]]"  width="100%" height="374px">
+              </template>
+            </image-carousel>
+          </template>
+        </dom-bind>
+        <div></div>
+      </demo-snippet>
+    </div>
+
+
+
+    <div class="vertical-section-container centered">
+      <h3 id="no-icons">image-carousel demo with no navigation icons</h3>
+      <demo-snippet>
+        <template>
+          <image-carousel hide-icons aria-labelledby="no-icons">
+            <template slot="images" is="dom-repeat" items='["https://c2.staticflickr.com/2/1217/4607963354_e1a8fea210_z.jpg", "http://www.hdwallpapery.com/static/images/1391099215267_hero2_niQ3B7S.jpg", "https://tse4.mm.bing.net/th?id=ORT.TH_470633631&pid=1.12&eid=G.470633631"]'>
+              <img class="scrolling-images" src="[[item]]" alt$="demo alt [[index]]"  width="100%" height="374px">
+            </template>
+          </image-carousel>
+        </template>
+        <dom-bind>
+          <template>
+            <image-carousel hide-icons aria-labelledby="no-icons">
+              <template slot="images" is="dom-repeat" items='["https://c2.staticflickr.com/2/1217/4607963354_e1a8fea210_z.jpg", "http://www.hdwallpapery.com/static/images/1391099215267_hero2_niQ3B7S.jpg", "https://tse4.mm.bing.net/th?id=ORT.TH_470633631&pid=1.12&eid=G.470633631"]'>
+                <img class="scrolling-images" src="[[item]]" alt$="demo alt [[index]]"  width="100%" height="374px">
+              </template>
+            </image-carousel>
+          </template>
+        </dom-bind>
+        <div></div>
+      </demo-snippet>
+    </div>
+
+
+
+    <div class="vertical-section-container centered">
+      <h3>Basic image-carousel, used inside another polymer element</h3>
+      <demo-snippet>
+        <template>
+          <image-carousel-demo-app aria-labelledby="image-carousel inside another polymer element" images='[
+            "https://c2.staticflickr.com/2/1217/4607963354_e1a8fea210_z.jpg",
+            "http://www.hdwallpapery.com/static/images/1391099215267_hero2_niQ3B7S.jpg",
+            "https://tse4.mm.bing.net/th?id=ORT.TH_470633631&pid=1.12&eid=G.470633631"]'>
+          </image-carousel-demo-app>
+        </template>
+        <dom-bind>
+          <template>
+            <image-carousel-demo-app aria-labelledby="image-carousel inside another polymer element" images='[
+              "https://c2.staticflickr.com/2/1217/4607963354_e1a8fea210_z.jpg",
+              "http://www.hdwallpapery.com/static/images/1391099215267_hero2_niQ3B7S.jpg",
+              "https://tse4.mm.bing.net/th?id=ORT.TH_470633631&pid=1.12&eid=G.470633631"]'>
+            </image-carousel-demo-app>
+          </template>
+        </dom-bind>
+        <div></div>
+      </demo-snippet>
+    </div>
+  </body>
+</html>

@@ -18,7 +18,8 @@
     "paper-card": "PolymerElements/paper-card#^2.0.0",
     "iron-list": "PolymerElements/iron-list#^2.0.12",
     "iron-ajax": "PolymerElements/iron-ajax#^2.1.1",
-    "paper-item": "PolymerElements/paper-item#^2.0.0"
+    "paper-item": "PolymerElements/paper-item#^2.0.0",
+    "image-carousel": "a1626/image-carousel#^2.1.0"
   },
   "resolutions": {
     "polymer": "^2.0.0"

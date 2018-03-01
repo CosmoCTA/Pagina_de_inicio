@@ -14,6 +14,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../bower_components/image-carousel/image-carousel.html">
 
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+
 
 <dom-module id="my-view1">
   <template>
@@ -121,6 +123,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
 
 
+    <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
+    </app-location>
+
+    <app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
+    </app-route>
+
+
     <!--  ****************************************************************************  divs *********************************************** -->
 
     <div class="white" align="center">
@@ -155,7 +164,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </div>
           <!-- <div class="child2">Beta</div>
           <div class="child3">Gamma</div> -->
-          <div class="child4" style="margin: 30px;"></div>
+          <div class="child4" style="margin: 30px;">
+              <iron-image alt="View2" style="width:100%; height:100%;" sizing="cover" src="images/pagina/piccinelli.png"></iron-image>
+          </div>
           <!--   Card 1.2 -->
 
         </div>
@@ -166,7 +177,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
           <!--carrusel -->
           <image-carousel aria-label="Basic image-carousel demo;" style="margin: 30px;">
-            <template slot="images" is="dom-repeat" items="[&quot;https://c2.staticflickr.com/2/1217/4607963354_e1a8fea210_z.jpg&quot;, &quot;http://www.hdwallpapery.com/static/images/1391099215267_hero2_niQ3B7S.jpg&quot;, &quot;https://tse4.mm.bing.net/th?id=ORT.TH_470633631&amp;pid=1.12&amp;eid=G.470633631&quot;]">
+            <template slot="images" is="dom-repeat" items="[&quot;images/pagina/martesC.jpg&quot;, &quot;images/pagina/sSI.jpg&quot;, &quot;images/pagina/difusion.png&quot;]">
               <img class="scrolling-images" src="[[item]]" alt$="demo alt [[index]]" width="100%" height="374px">
             </template>
           </image-carousel>
@@ -174,15 +185,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 
         <div class="container" style="margin-top:10px; max-width:90%; line-height: 30px;box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
-      
+
           <ul class="flex-container">
-              <li class="flex-item">1</li>
-              <li class="flex-item">2</li>
-              <li class="flex-item">3</li>
-              <li class="flex-item">4</li>
-              <li class="flex-item">5</li>
-              <li class="flex-item">6</li>
-            </ul>
+            <li class="flex-item">
+              <a name="view1" href="[[rootPath]]view2">
+                <iron-image alt="View2" style="width:100%; height:100%;" sizing="cover" src="images/pagina/piccinelli.png"></iron-image>
+              </a>
+            </li>
+            <li class="flex-item">
+              <a name="view1" href="[[rootPath]]view3">
+                <iron-image alt="View3" style="width:100%; height:100%;" sizing="cover" src="images/pagina/alanE.png"></iron-image>
+              </a>
+            </li>
+
+            <li class="flex-item">
+              <a name="view1" href="[[rootPath]]view4">
+                <iron-image alt="View4" style="width:100%; height:100%;" sizing="cover" src="images/pagina/javi.png"></iron-image>
+              </a>
+            </li>
+
+            <li class="flex-item">
+              <a name="view1" href="[[rootPath]]view5">
+                <iron-image alt="View5" style="width:100%; height:100%;" sizing="cover" src="images/pagina/rene.png"></iron-image>
+              </a>
+            </li>
+
+            <li class="flex-item">
+              <a name="view1" href="[[rootPath]]view6">
+                <iron-image alt="View6" style="width:100%; height:100%;" sizing="cover" src="images/pagina/alanS.png"></iron-image>
+              </a>
+            </li>
+
+
+          </ul>
         </div>
 
 

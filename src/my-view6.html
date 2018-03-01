@@ -11,29 +11,59 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="shared-styles.html">
 
-<dom-module id="my-view6">
-    <template>
-        <style include="shared-styles">
-            :host {
-                display: block;
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
 
-                padding: 10px;
-            }
-        </style>
+<dom-module id="my-view6" >
+<template>
+    <style include="shared-styles">
+        :host {
+            display: block;
 
-        <div class="card">
-
-            <h1>CosmoCTA</h1>
-
-        </div>
-
-    </template>
-
-    <script>
-        class MyView6 extends Polymer.Element {
-            static get is() { return 'my-view6'; }
+            padding: 10px;
         }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 
-        window.customElements.define(MyView6.is, MyView6);
-    </script>
+    <app-location
+    route="{{route}}"
+    url-space-regex="^[[rootPath]]">
+</app-location>
+
+<app-route
+route="{{route}}"
+pattern="[[rootPath]]:page"
+data="{{routeData}}"
+tail="{{subroute}}">
+</app-route>
+
+<div class="card">
+
+    <h1>CosmoCTA</h1>
+    <div class="card" style="max-width:80%;border: 2px solid grey;
+margin: 0;
+padding: 0;
+border-radius: 50px;
+overflow: auto;">
+        <a name="view1" href="[[rootPath]]view5">
+        <iron-image alt="Hola" style="width:100%; height:400px;" sizing="cover"
+        src="images/pagina/piccinelli.png"></iron-image>
+    </a>
+    </div>
+    
+
+
+</div>
+
+</template>
+
+<script>
+    class MyView6 extends Polymer.Element {
+        static get is() { return 'my-view6'; }
+    }
+
+    window.customElements.define(MyView6.is, MyView6);
+</script>
 </dom-module>

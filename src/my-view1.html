@@ -62,7 +62,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
         justify-content: space-around;
       }
 
@@ -113,7 +113,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background-color: rgba(24, 70, 209, 0.473);
         padding: 12px;
         margin: 4px;
+        max-width:90%; 
+        line-height:30px;
       }
+
+  skeleton-carousel {
+    margin-top:20px; 
+    margin-left:65px;
+    margin-right: 65px;
+    min-height: 500px;
+  }
+
     </style>
 
 
@@ -155,53 +165,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <!-- <div class="child2">Beta</div>
           <div class="child3">Gamma</div> -->
 
-          <div class="child4" style="margin:30px;">
-              <iron-image alt="View2" style="width:100%; height:100%;" sizing="cover" src="images/pagina/piccinelli.png"></iron-image>
+          <div class="child4" style="margin:30px; text-align: justify;">
+              <iron-image alt="View2" style="width:100%; height:100%;" sizing="cover" 
+              src="images/pagina/piccinelli.png"></iron-image>
+
           </div>
           <!--   Card 1.2 -->
 
         </div>
 
 
-        <div class="container" style="margin-top:10px; max-width:90%; line-height: 30px;box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
-          <!--card 2.0 -->
-          <!--carrusel 
-          <image-carousel aria-label="Basic image-carousel demo;" style="margin: 30px;">
-            <template slot="images" is="dom-repeat" items="[&quot;images/pagina/martesC.jpg&quot;, &quot;images/pagina/sSI.jpg&quot;, &quot;images/pagina/difusion.png&quot;]">
-              <img class="scrolling-images" src="[[item]]" alt$="demo alt [[index]]" width="100%" height="374px">
-            </template>
-          </image-carousel>-->
-
-          <skeleton-carousel dots nav loop>
-              <div>
-                  <iron-image alt="View3" style="width:100%; height:100%;" 
-                  sizing="cover" src="images/pagina/martesC.jpg">
-                </iron-image>               
-                <h3>Martes de Ciencia</h3>
-              </div>
-              <div>
-                  <iron-image alt="View3" style="width:100%; height:100%;" 
-                  sizing="cover" src="images/pagina/docencia.jpg">
-                </iron-image>               
-                <h3>Docencia</h3>
-              </div>
-              <div>
-                  <iron-image alt="View3" style="width:100%; height:100%;" 
-                  sizing="cover" src="images/pagina/difusion.jpg">
-                </iron-image>               
-                <h3>Difusion</h3>
-              </div>
-            </skeleton-carousel>
+              <skeleton-carousel dots nav loop style="margin-top:20px; max-width:100%; max-height: 1000px;
+              box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+                <iron-image src="images/pagina/martesC.jpg"
+                            style="margin-top:15px;max-width: auto;height: auto"
+                            sizing="cover"
+                            preload
+                            fade
+                            ></iron-image>
+                <iron-image src="images/pagina/docencia.png"
+                            sizing="cover"
+                            preload
+                            fade
+                            ></iron-image>
+                <iron-image src="images/pagina/difusion.png"
+                            sizing="cover"
+                            preload
+                            fade
+                            ></iron-image>
+              </skeleton-carousel>
+  
 
 
-
-
-        </div>
-
-        
-
-
-        <div class="container" style="margin-top:10px; max-width:90%; line-height: 30px;
+        <div class="container" style="margin-top:20px; max-width:90%; line-height: 30px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
 
           <ul class="flex-container">

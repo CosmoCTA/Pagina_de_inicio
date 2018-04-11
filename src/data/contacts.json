@@ -70,8 +70,23 @@
     "github": "https://github.com/galiqh",
     "name_github": "galiqh",
     "phone":"55 66 57 66 18"
+  },
+  {
+    "index": 8,
+    "name": "Monroy Romo Gabriel Emmanuel",
+    "image": "images/pagina/tlacua.jpg",
+    "email": "gromo1700@gmail.com",
+    "github": "https://github.com/galiqh",
+    "name_github": "galiqh",
+    "phone":"55 84 86 37 77"
+  },
+  {
+    "index": 8,
+    "name": "Hernandez Garcia Carlos",
+    "image": "images/pagina/steave.jpg",
+    "email": "lan.ram.cr@gmail.com",
+    "github": "https://github.com/galiqh",
+    "name_github": "galiqh",
+    "phone":"55 68 86 39 21"
   }
-
-  
-
 ]

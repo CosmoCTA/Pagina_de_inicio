@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>skeleton-carousel test</title>
+
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+  <script src="../../iron-test-helpers/mock-interactions.js"></script>
+
+  <link rel="import" href="../../iron-image/iron-image.html">
+  <link rel="import" href="../skeleton-carousel.html">
+</head>
+<body>
+
+<test-fixture id="basicCarousel">
+  <template>
+    <skeleton-carousel dots nav>
+      <div>
+        <iron-image data-src="http://source.unsplash.com/category/nature/400x400"
+                    sizing="cover"
+                    preload
+        ></iron-image>
+      </div>
+      <div>
+        <iron-image data-src="http://source.unsplash.com/category/food/400x400"
+                    sizing="cover"
+                    preload
+        ></iron-image>
+      </div>
+    </skeleton-carousel>
+  </template>
+</test-fixture>
+
+<test-fixture id="endCarousel">
+  <template>
+    <skeleton-carousel dots nav selected="1">
+      <div>
+        <iron-image data-src="http://source.unsplash.com/category/nature/400x400"
+                    sizing="cover"
+                    preload
+        ></iron-image>
+      </div>
+      <div>
+        <iron-image data-src="http://source.unsplash.com/category/food/400x400"
+                    sizing="cover"
+                    preload
+        ></iron-image>
+      </div>
+    </skeleton-carousel>
+  </template>
+</test-fixture>
+
+<test-fixture id="loopCarousel">
+  <template>
+    <skeleton-carousel dots nav loop>
+      <div>
+        <iron-image data-src="http://source.unsplash.com/category/nature/400x400"
+                    sizing="cover"
+                    preload
+        ></iron-image>
+      </div>
+      <div>
+        <iron-image data-src="http://source.unsplash.com/category/food/400x400"
+                    sizing="cover"
+                    preload
+        ></iron-image>
+      </div>
+    </skeleton-carousel>
+  </template>
+</test-fixture>
+
+<test-fixture id="listBoundaries">
+  <template>
+    <skeleton-carousel dots nav>
+      <div>
+        <iron-image data-src="http://source.unsplash.com/category/nature/400x400"
+                    sizing="cover"
+                    preload
+        ></iron-image>
+      </div>
+      <div>
+        <iron-image data-src="http://source.unsplash.com/category/nature/400x400"
+                    sizing="cover"
+                    preload
+        ></iron-image>
+      </div>
+    </skeleton-carousel>
+  </template>
+</test-fixture>
+
+<test-fixture id="disabledCarousel">
+  <template>
+    <skeleton-carousel dots nav disabled>
+      <div>
+        <iron-image data-src="http://source.unsplash.com/category/nature/400x400"
+                    sizing="cover"
+                    preload
+        ></iron-image>
+      </div>
+      <div>
+        <iron-image data-src="http://source.unsplash.com/category/nature/400x400"
+                    sizing="cover"
+                    preload
+        ></iron-image>
+      </div>
+    </skeleton-carousel>
+  </template>
+</test-fixture>
+
+<test-fixture id="domRepeatCarousel">
+  <template>
+    <div>
+      <dom-bind>
+        <template>
+          <skeleton-carousel dots nav>
+            <template
+              is="dom-repeat"
+              items='["https://source.unsplash.com/category/buildings/500x300", "https://source.unsplash.com/category/food/500x300"]'>
+              <iron-image
+                placeholder="https://source.unsplash.com/category/nature/10x10"
+                data-src$="[[item]]"
+                sizing="cover"
+                preload
+                fade
+              ></iron-image>
+            </template>
+          </skeleton-carousel>
+        </template>
+      </dom-bind>
+    </div>
+  </template>
+</test-fixture>
+
+<script>
+  const oncePropChanged = (el, prop) => {
+    return new Promise((resolve, reject) => {
+      const dashedPropName = prop
+        .replace(/[A-Z]/g, (match) => `-${match[0].toLowerCase()}`)
+        .concat('-changed');
+      el.addEventListener(dashedPropName, listener);
+      /**
+       * listener
+       * @param {Object} event
+       */
+      function listener(event) {
+        el.removeEventListener(dashedPropName, listener);
+        resolve(event);
+      }
+    });
+  };
+
+  suite('Basic behaviour', () => {
+    let element;
+
+    setup(() => {
+      element = fixture('basicCarousel');
+    });
+
+    a11ySuite('basicCarousel');
+
+    test('Total property should return all the childs', (done) => {
+      oncePropChanged(element, 'total').then(() => {
+        expect(element.total).to.equal(2);
+        done();
+      })
+      .catch(done);
+    });
+  });
+
+  suite('End event behaviour', () => {
+    let element;
+
+    setup(() => {
+      element = fixture('endCarousel');
+    });
+
+    test('End should be true if last item is selected', (done) => {
+      oncePropChanged(element, 'total').then(() => {
+        expect(element.end).to.be.true;
+        done();
+      })
+      .catch(done);
+    });
+  });
+
+  suite('Loop behaviour', () => {
+    let element;
+
+    setup(() => {
+      element = fixture('loopCarousel');
+    });
+
+    test('If loop is set showNext & showPrev should be true', (done) => {
+      expect(element.showNext).to.be.true;
+      expect(element.showPrev).to.be.true;
+      done();
+    });
+  });
+
+  suite('List boundaries', () => {
+    let element;
+    let next;
+    let prev;
+
+    setup(() => {
+      element = fixture('listBoundaries');
+      next = element.shadowRoot.querySelector('#next');
+      prev = element.shadowRoot.querySelector('#prev');
+    });
+
+    test('showPrev & showNext should be disable', (done) => {
+      expect(prev.disabled).to.be.true;
+
+      MockInteractions.tap(next);
+
+      expect(next.disabled).to.be.true;
+      done();
+    });
+  });
+
+  suite('Disable option', () => {
+    test('showPrev & showNext should be disable', (done) => {
+      let element = fixture('disabledCarousel');
+      flush(() => {
+        const buttons = element
+          .shadowRoot
+          .querySelector('#dots')
+          .querySelectorAll('paper-icon-button');
+
+        buttons.forEach((button) => {
+          expect(button.disabled).to.be.true;
+        });
+
+        done();
+      });
+    });
+  });
+
+  suite('Keyboard actions', () => {
+    let element;
+    let keyCodes = {
+      'right': 39,
+      'left': 37,
+      'up': 38,
+      'down': 40,
+    };
+
+    test('Should control prev and next slide with keybindings', (done) => {
+      element = fixture('basicCarousel');
+      flush(() => {
+        // Press right arrow key
+        MockInteractions.pressAndReleaseKeyOn(element, keyCodes.right);
+        expect(element.selected).to.equal(1);
+
+        // Press left arrow key
+        MockInteractions.pressAndReleaseKeyOn(element, keyCodes.left);
+        expect(element.selected).to.equal(0);
+
+        // Press down arrow key
+        MockInteractions.pressAndReleaseKeyOn(element, keyCodes.down);
+        expect(element.selected).to.equal(1);
+
+        // Press up arrow key
+        MockInteractions.pressAndReleaseKeyOn(element, keyCodes.up);
+        expect(element.selected).to.equal(0);
+
+        done();
+      });
+    });
+  });
+
+  suite('Basic dom-repeat behaviour', () => {
+    let element;
+
+    setup(() => {
+      element = fixture('domRepeatCarousel');
+    });
+
+    test('Total property should return all dom-repeat childs', (done) => {
+      flush(() => {
+        const carousel = element.querySelector('skeleton-carousel');
+        expect(carousel.total).to.equal(2);
+        done();
+      });
+    });
+  });
+</script>
+</body>
+</html>

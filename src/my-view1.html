@@ -12,8 +12,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="shared-styles.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
-<link rel="import" href="../bower_components/image-carousel/image-carousel.html">
-
+<link rel="import" href="../bower_components/skeleton-carousel/skeleton-carousel.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
 
 
@@ -23,29 +22,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
     <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
     <style is="custom-style">
+
       .container {
         @apply --layout-horizontal;
         @apply --layout-justified;
-
         height: auto;
-      }
+       }
 
       .container div {
         @apply --layout-flex;
-
       }
 
       .child1 {
         @apply --layout-self-start;
-        font-size: 45px;
+        font-size: 35px;
         color: whitesmoke;
-
-
       }
 
       .child2 {
         @apply --layout-self-center;
-
       }
 
       .child3 {
@@ -55,32 +50,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .child4 {
         @apply --layout-self-stretch;
         color: white;
-
-
+        margin: 30px;
       }
 
       .flex-container {
         padding: 0;
         margin: 0;
         list-style: none;
-
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-
         -webkit-flex-flow: row wrap;
         justify-content: space-around;
       }
 
       .flex-item {
-        background-color: rgba(24, 70, 209, 0.473);
+        /*background-color: rgba(24, 70, 209, 0.205); */
         padding: 5px;
         width: 200px;
-        height: 150px;
+        height: 200px;
         margin: 20px;
-
         line-height: 150px;
         color: white;
         font-weight: bold;
@@ -88,30 +79,33 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-align: center;
       }
 
-      /* .child5 {
-      
+      /* .child5 {      
         padding: 0px;
         width: 200px;
         height: 150px;
         margin: 30px;
-
         line-height: 150px;
         color: white;
         font-weight: bold;
         font-size: 3em;
         text-align: center;
-
       } */
+
     </style>
 
     <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
 
     <style>
+
       .container,
       .layout {
         /* background-color: #ccc; */
-        background: linear-gradient(to bottom right, #083c58, #725e03);
+        background: linear-gradient(to bottom right, #86b9fc, #023549);        
         padding: 4px;
+        margin:20px; 
+        max-width:90%; 
+        line-height:30px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.5);
       }
 
       .container div,
@@ -132,24 +126,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <!--  ****************************************************************************  divs *********************************************** -->
 
-    <div class="white" align="center">
+    <div class="white" align="center" style="background-color: rgb(253, 253, 253)">
+      <!-- primera card externa -->
 
+      
+        
 
-      <div class="card" style="max-width: 80%;">
-        <!-- primera card externa -->
-
-
-        <h1 style="font-size: 30pt; margin-left:65px;margin-top:45px;  text-align:left; ">Bienvenidos</h1>
+        <h1 style="font-size: 6vw; margin-left:65px;margin-top:45px;  text-align:center; ">Bienvenidos</h1>
         <!--Primer Iron Flex -->
 
-
-        <div class="container" style="margin-top:10px; max-width:90%; line-height: 30px;box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+        <div class="container" >
           <!-- card 1.0-->
-
 
           <div class="child4" style="margin: 30px;">
             <!--card 1.1 -->
-            <div class="child1" style="background:rgba(209, 153, 0, 0.479);">Dra.Gabriella Piccinelli Bocchi</div>
+            <div class="child1" style="background-color:rgba(209, 153, 0, 0.479);";>Dra.Gabriella Piccinelli Bocchi</div>
             <!-- Card 1.1.1-->
             <h3>Ingeniera Física, UAM Azcapotzalco.</h3>
             <h3>Maestra en Ciencias (Física) UNAM.</h3>
@@ -160,11 +151,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <h3>Catedrática en la Carrera de Ingeniería en Computación y en el Posgrado de Ingeniería.</h3>
             <h3></h3>
             <h3></h3>
-
           </div>
           <!-- <div class="child2">Beta</div>
           <div class="child3">Gamma</div> -->
-          <div class="child4" style="margin: 30px;">
+
+          <div class="child4" style="margin:30px;">
               <iron-image alt="View2" style="width:100%; height:100%;" sizing="cover" src="images/pagina/piccinelli.png"></iron-image>
           </div>
           <!--   Card 1.2 -->
@@ -174,45 +165,81 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <div class="container" style="margin-top:10px; max-width:90%; line-height: 30px;box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
           <!--card 2.0 -->
-
-          <!--carrusel -->
+          <!--carrusel 
           <image-carousel aria-label="Basic image-carousel demo;" style="margin: 30px;">
             <template slot="images" is="dom-repeat" items="[&quot;images/pagina/martesC.jpg&quot;, &quot;images/pagina/sSI.jpg&quot;, &quot;images/pagina/difusion.png&quot;]">
               <img class="scrolling-images" src="[[item]]" alt$="demo alt [[index]]" width="100%" height="374px">
             </template>
-          </image-carousel>
+          </image-carousel>-->
+
+          <skeleton-carousel dots nav loop>
+              <div>
+                  <iron-image alt="View3" style="width:100%; height:100%;" 
+                  sizing="cover" src="images/pagina/martesC.jpg">
+                </iron-image>               
+                <h3>Martes de Ciencia</h3>
+              </div>
+              <div>
+                  <iron-image alt="View3" style="width:100%; height:100%;" 
+                  sizing="cover" src="images/pagina/docencia.jpg">
+                </iron-image>               
+                <h3>Docencia</h3>
+              </div>
+              <div>
+                  <iron-image alt="View3" style="width:100%; height:100%;" 
+                  sizing="cover" src="images/pagina/difusion.jpg">
+                </iron-image>               
+                <h3>Difusion</h3>
+              </div>
+            </skeleton-carousel>
+
+
+
+
         </div>
 
+        
 
-        <div class="container" style="margin-top:10px; max-width:90%; line-height: 30px;box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+
+        <div class="container" style="margin-top:10px; max-width:90%; line-height: 30px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
 
           <ul class="flex-container">
             <li class="flex-item">
               <a name="view1" href="[[rootPath]]view2">
-                <iron-image alt="View2" style="width:100%; height:100%;" sizing="cover" src="images/pagina/piccinelli.png"></iron-image>
-              </a>
+                  <iron-image alt="View3" style="width:80%; height:80%;" 
+                  sizing="cover" src="images/pagina/ss.svg">
+                </iron-image>
             </li>
             <li class="flex-item">
               <a name="view1" href="[[rootPath]]view3">
-                <iron-image alt="View3" style="width:100%; height:100%;" sizing="cover" src="images/pagina/alanE.png"></iron-image>
+                <iron-image alt="View3" style="width:80%; height:80%;" 
+                sizing="cover" src="images/pagina/docencia1.svg">
+              </iron-image>
               </a>
             </li>
 
             <li class="flex-item">
               <a name="view1" href="[[rootPath]]view4">
-                <iron-image alt="View4" style="width:100%; height:100%;" sizing="cover" src="images/pagina/javi.png"></iron-image>
+                <iron-image alt="View4" style="width:80%; height:80%;" 
+                sizing="cover" src="images/pagina/inv.svg">
+              </iron-image>
               </a>
             </li>
 
             <li class="flex-item">
               <a name="view1" href="[[rootPath]]view5">
-                <iron-image alt="View5" style="width:100%; height:100%;" sizing="cover" src="images/pagina/rene.png"></iron-image>
+                <iron-image alt="View5" style="width:80%; height:80%;" 
+                sizing="cover" src="images/pagina/difusion1.svg">
+              </iron-image>
               </a>
             </li>
 
             <li class="flex-item">
               <a name="view1" href="[[rootPath]]view6">
-                <iron-image alt="View6" style="width:100%; height:100%;" sizing="cover" src="images/pagina/alanS.png"></iron-image>
+                <iron-image alt="View6" style="width:80%; height:80%;" 
+                sizing="cover" src="images/pagina/question.png">
+              </iron-image>
               </a>
             </li>
 
@@ -221,7 +248,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </div>
 
 
-      </div>
+      
 
     </div>
 

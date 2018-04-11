@@ -1,11 +1,11 @@
-<!--
-@license
-Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+    <!--
+    @license
+    Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+    Code distributed by Google as part of the polymer project is also
+    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
@@ -14,8 +14,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
 
 <dom-module id="my-view6" >
-<template>
-    <style include="shared-styles">
+    <template>
+        <style include="shared-styles">
         :host {
             display: block;
 
@@ -27,35 +27,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
     </style>
 
-    <app-location
-    route="{{route}}"
-    url-space-regex="^[[rootPath]]">
-</app-location>
+    <div class="white" align="center">
+        <h1 style="font-size: 30pt">CosmoCTA</h1>
 
-<app-route
-route="{{route}}"
-pattern="[[rootPath]]:page"
-data="{{routeData}}"
-tail="{{subroute}}">
-</app-route>
+        <div class="card" style="max-width: 80%;align-content: center;">
 
-<div class="card">
+      <p>Somos un grupo conformado por estudiantes, profesores e investigadores en busca de crear productos de apoyo a la docencia basados en Realidad aumentada que sean de impacto en las actuales prácticas educativas de nuestra comunidad</p>
+      
+    </div> 
 
-    <h1>CosmoCTA</h1>
-    <div class="card" style="max-width:80%;border: 2px solid grey;
-margin: 0;
-padding: 0;
-border-radius: 50px;
-overflow: auto;">
-        <a name="view1" href="[[rootPath]]view5">
-        <iron-image alt="Hola" style="width:100%; height:400px;" sizing="cover"
-        src="images/pagina/piccinelli.png"></iron-image>
-    </a>
     </div>
-    
-
-
-</div>
 
 </template>
 

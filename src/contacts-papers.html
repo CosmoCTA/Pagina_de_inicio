@@ -8,16 +8,11 @@
 
 <dom-module id="contacts-papers">
 	<template>
-
-	<iron-ajax url="../src/data/contacts.json" last-response="{{data}}" auto></iron-ajax>
-	<div class="container" style="justify-content: center; align-items: center; background-position: center;" >
-		
-		<iron-list align="center" items="[[data]]" as="item" scroll-target="document" scroll-offset="200" grid>	
-		<template>
-
-			<div class="item">
-
-				<paper-card heading="Desarrollador Web Jr" image="[[item.image]]" class="white" style=" margin: 15px; width: 200px; height: 500px;">
+		<iron-ajax url="../src/data/contacts.json" last-response="{{data}}" auto></iron-ajax>
+		<iron-list items="[[data]]" as="item"   scroll-offset="200" grid>
+			<template>
+				<div class="item" tabindex$="[[tabIndex]]">
+					<paper-card heading="Desarrollador Web Jr" image="[[item.image]]" class="white" style=" margin: 15px; width: 200px; height: 500px;">
 
 					<div class="card">
 						<h5>          
@@ -55,26 +50,18 @@
 						</paper-button>  
 					</div>    
 				</paper-card>
-			</div>
+				</div>
+			</template>
+		</iron-list>
+	</template>
 
-		</template>	
-
-	</iron-list>
-
-	</div>
-
-	
-
-
-</template>
-
-<script>
-	class ContactsPapers extends Polymer.Element {
-		static get is() { return 'contacts-papers'; }
+	<script>
+		class ContactsPapers extends Polymer.Element {
+			static get is() { return 'contacts-papers'; }
 
 
-	}
+		}
 
-	window.customElements.define(ContactsPapers.is, ContactsPapers);
-</script>
+		window.customElements.define(ContactsPapers.is, ContactsPapers);
+	</script>
 </dom-module>

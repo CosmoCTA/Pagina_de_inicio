@@ -1,0 +1,92 @@
+[
+  {
+    "index": 0,
+    "name": "Rodrigo Aaron Martinez Tellez",
+    "image": "images/pagina/aron.png",
+    "email": "arontellezm@gmail.com",
+    "github": "https://github.com/AaronRebel09",
+    "name_github": "AaronRebel09",
+    "phone":"55 41 29 74 91"
+  },
+  {
+    "index": 1,
+    "name": "Pedro Uriel Martinez Martinez",
+    "image": "images/pagina/uriel.jpg",
+    "email": "petrvs2310@gmail.com",
+    "github": "https://github.com/petrvs2",
+    "name_github": "petrvs2",
+    "phone":"55 26 55 00 26"
+  },
+  {
+    "index": 2,
+    "name": "Alan Escamilla Mondragon",
+    "image": "images/pagina/alanE.png",
+    "email": "alan.escamillam@gmail.com",
+    "github": "https://github.com/allimacse",
+    "name_github": "allimacse",
+    "phone":"55 39 38 98 82"
+  },
+  {
+    "index": 3,
+    "name": "Alan Sandoval Almaraz",
+    "image": "images/pagina/alanS.png",
+    "email": "sandoval.almaraz@gmail.com",
+    "github": "https://github.com/AlanSaAl",
+    "name_github": "AlanSaAl",
+    "phone":"55 10 70 06 81"
+  },
+  {
+    "index": 4,
+    "name": "Javier Mercado Velazquez",
+    "image": "images/pagina/javi.png",
+    "email": "elchangodiaz1@gmail.com",
+    "github": "https://github.com/elchangodiaz",
+    "name_github": "elchangodiaz",
+    "phone":"55 41 91 68 30 "
+  },
+  {
+    "index": 5,
+    "name": "Daniel Felipe Oros Peña",
+    "image": "images/pagina/dani.png",
+    "email": "danielhola1111@gmail.com",
+    "github": "https://github.com/danyoros20",
+    "name_github": "danyoros20",
+    "phone":"55 19 19 07 75"
+  },
+  {
+    "index": 6,
+    "name": "Rene Jesus Pineda Angeles",
+    "image": "images/pagina/rene.png",
+    "email": "ranarene179@gmail.com",
+    "github": "https://github.com/Rene55",
+    "name_github": "Rene55",
+    "phone":"55 16 43 50 46"
+  },
+  {
+    "index": 7,
+    "name": "Galilea Quintanilla Hernandez",
+    "image": "images/pagina/galy.png",
+    "email": "galyquintanilla@gmail.com",
+    "github": "https://github.com/galiqh",
+    "name_github": "galiqh",
+    "phone":"55 66 57 66 18"
+  },
+  {
+    "index": 8,
+    "name": "Monroy Romo Gabriel Emmanuel",
+    "image": "images/pagina/tlacua.jpg",
+    "email": "gromo1700@gmail.com",
+    "github": "https://github.com/galiqh",
+    "name_github": "galiqh",
+    "phone":"55 84 86 37 77"
+  },
+  {
+    "index": 8,
+    "name": "Hernandez Garcia Carlos",
+    "image": "images/pagina/steave.jpg",
+    "email": "lan.ram.cr@gmail.com",
+    "github": "https://github.com/galiqh",
+    "name_github": "galiqh",
+    "phone":"55 68 86 39 21"
+  }
+]

@@ -27,8 +27,7 @@
       "name": "es5-bundled",
       "js": {
         "minify": true,
-        "compile": "es5",
-        "transformModulesToAmd": true
+        "compile": true
       },
       "css": {
         "minify": true
@@ -48,8 +47,7 @@
       ],
       "js": {
         "minify": true,
-        "compile": "es2015",
-        "transformModulesToAmd": true
+        "compile": false
       },
       "css": {
         "minify": true
@@ -70,8 +68,7 @@
       ],
       "js": {
         "minify": true,
-        "compile": "es2015",
-        "transformModulesToAmd": true
+        "compile": false
       },
       "css": {
         "minify": true
@@ -89,6 +86,5 @@
     "rules": [
       "polymer-2"
     ]
-  },
-  "moduleResolution": "node"
+  }
 }

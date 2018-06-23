@@ -1,0 +1,35 @@
+[debug] [2018-06-23T04:46:48.137Z] ----------------------------------------------------------------------
+[debug] [2018-06-23T04:46:48.141Z] Command:       /home/alan/.nvm/versions/node/v8.11.3/bin/node /home/alan/.nvm/versions/node/v8.11.3/bin/firebase deploy
+[debug] [2018-06-23T04:46:48.141Z] CLI Version:   3.19.0
+[debug] [2018-06-23T04:46:48.141Z] Platform:      linux
+[debug] [2018-06-23T04:46:48.141Z] Node Version:  v8.11.3
+[debug] [2018-06-23T04:46:48.141Z] Time:          Fri Jun 22 2018 23:46:48 GMT-0500 (CDT)
+[debug] [2018-06-23T04:46:48.141Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-23T04:46:48.154Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-23T04:46:48.155Z] > authorizing via signed-in user
+[debug] [2018-06-23T04:46:48.158Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-06-23T04:46:48.158Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/BS709AMnW3YPZUOa5VCyQq0t2CiMB0ZD-LGzmxIqZCY',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Fri Jun 22 2018 23:46:48 GMT-0500 (CDT)
+[debug] [2018-06-23T04:46:48.503Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-23T04:46:48.560Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/laboratorios-ambientales  
+  
+ Fri Jun 22 2018 23:46:48 GMT-0500 (CDT)
+[debug] [2018-06-23T04:46:52.039Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-23T04:46:52.041Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/laboratorios-ambientales/tokens  
+  
+ Fri Jun 22 2018 23:46:52 GMT-0500 (CDT)
+[debug] [2018-06-23T04:46:52.488Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'laboratorios-ambientales'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing build/es5-bundled/ directory for upload...
+[debug] [2018-06-23T04:46:53.529Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/laboratorios-ambientales/uploads/-LFexq6si1t6_oaT6utb?fileCount=56&message=  
+  
+ Fri Jun 22 2018 23:46:53 GMT-0500 (CDT)

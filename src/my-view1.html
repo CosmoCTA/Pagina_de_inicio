@@ -91,6 +91,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-align: center;
       } */
 
+
+      
+
     </style>
 
     <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
@@ -177,31 +180,54 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         </div>
 
+        <div class="container" style="margin-top:20px; max-width:90%; line-height: 30px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+        
+        <skeleton-carousel dots nav loop auto style="max-width:100%; max-height: 100%; 
+        background: linear-gradient(to bottom right, #ffffff2c,#ffffff);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+          <iron-image src="images/pagina/Aemando.jpg"
+                      sizing="contain"
+                     preload
+                     fade
+                     >
+                     <!-- The Modal -->
+      <div id="myModal" class="modal">
 
-              <skeleton-carousel dots nav loop style="margin-top:20px; max-width:100%; max-height: 1000px; 
-              background: linear-gradient(to bottom right, #ffffff2c,#ffffff);
-              box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
-                <iron-image src="images/pagina/Aemando.jpg"
-                            sizing="contain"
-                           preload
-                           fade
-                           ></iron-image>
-                <iron-image src="images/pagina/martesC.jpg"
-                            sizing="null"
-                            preload
-                            fade
-                            ></iron-image>
-                <iron-image src="images/pagina/docencia.png"
-                            sizing="null"
-                            preload
-                            fade
-                            ></iron-image>
-                <iron-image src="images/pagina/difusion.png"
-                            sizing="null"
-                            preload
-                            fade
-                            ></iron-image>
-              </skeleton-carousel>
+        <!-- The Close Button -->
+        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+      </div>
+                    </iron-image>
+          <iron-image src="images/pagina/docencia.png"
+                      sizing="contain"
+                      preload
+                      fade
+                      onclick="hola()"
+                      ></iron-image>
+          <iron-image src="images/pagina/difusion.png"
+                      sizing="contain"
+                      preload
+                      fade
+                      ></iron-image>
+          <iron-image src="images/pagina/cosmoCTA.jpeg"
+                      sizing="contain"
+                      preload
+                      fade
+                      ></iron-image>
+          <iron-image src="images/pagina/educar.jpeg"
+                      sizing="contain"
+                      preload
+                      fade
+                      ></iron-image>
+        </skeleton-carousel>
+        </div>
+              
   
 
 
@@ -264,6 +290,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script>
     class MyView1 extends Polymer.Element {
       static get is() { return 'my-view1'; }
+      ready() {
+        super.ready();
+        console.log('Ejecutándose ready');
+      }
+
     }
 
     window.customElements.define(MyView1.is, MyView1);
